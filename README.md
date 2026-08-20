@@ -1,0 +1,26 @@
+# Auto Wallpaper para Wayland (Probado en CachyOS + Hyprland + Calestia Dots, Wallhaven API)
+
+Un script ligero y autonomo en Python disenado para entornos Wayland que cambia tu fondo de pantalla automaticamente usando la API de Wallhaven. Ideal para tus Wifus o alguna otra preferencia.
+
+Caracteristicas Principales
+- **Descarga Inteligente:** Busca imagenes en resolucion 16:9 y pureza SFW directamente desde Wallhaven. Puedes cambiar esto *cof cof* ya sabes para qué cosa.
+- **Sistema Anti-Repeticion:** Utiliza un sistema de "baraja" para asegurar que todos los personajes o etiquetas configuradas se muestren al menos una vez antes de repetir algun termino.
+- **Modo Offline de Respaldo:** Si no hay conexion a internet o la API de Wallhaven limita las descargas temporalmente, el script reciclara automaticamente las imagenes ya guardadas.
+- **Auto-Limpieza (Cuidado del Disco):** Cada 24 horas (o al iniciar la PC), el script borra las imagenes mas antiguas y conserva unicamente las 5 mas recientes por personaje para evitar llenar el almacenamiento local.
+- **Transiciones Fluidas:** Configurado por defecto para usar `awww` (compatible tambien con `swww`).
+
+## Compatibilidad
+Este script esta disenado principalmente para gestores de ventanas basados en **Wayland** (probado y optimizado en CachyOS Hyprland). Utiliza `awww`/`swww` como motor de dibujo y transicion. No es compatible de forma nativa con entornos antiguos en X11 (como i3 o bspwm) ni con entornos de escritorio completos que controlan estrictamente su propio fondo (como KDE Plasma o GNOME).
+
+## Dependencias Requeridas
+Para que el script funcione correctamente, tu sistema debe contar con:
+- `python`
+- `python-requests`
+- `awww` (o `swww`)
+
+## Para la Instalacion y Uso
+
+**Solo debes instalar dependencias:** 
+   Asegurate de instalar Python y la libreria requests desde tu gestor de paquetes, preguntale a tu IA de confianza si tienes otro. Por ejemplo, en Arch Linux o CachyOS:
+   ```bash
+   sudo pacman -S python-requests
