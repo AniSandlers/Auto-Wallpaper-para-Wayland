@@ -25,7 +25,8 @@ Para que el script funcione correctamente, tu sistema debe contar con:
 1. **Solo debes instalar dependencias:** 
    Asegurate de instalar Python y la libreria requests desde tu gestor de paquetes, preguntale a tu IA de confianza si tienes otro. Por ejemplo, en Arch Linux o CachyOS:
    ```bash
-   sudo pacman -S python-requests
+sudo pacman -S python-request
+
 
 2. **Guardar el archivo principal:**
 Descarga el archivo autowallpaper.py y guardalo en tu directorio de scripts de Hyprland, por ejemplo en: ~/.config/hypr/scripts/
@@ -34,10 +35,10 @@ Descarga el archivo autowallpaper.py y guardalo en tu directorio de scripts de H
 Abre una terminal y haz que el script sea ejecutable por el sistema:
 chmod +x ~/.config/hypr/scripts/autowallpaper.py
 
-4. **Configuracion interna:**
+5. **Configuracion interna:**
 Puedes abrir autowallpaper.py con cualquier editor de texto para modificar el diccionario PERSONAJES e incluir tus propios terminos de busqueda o ajustar la variable TIEMPO_MINUTOS segun tus preferencias.
 
-5. **Automatizacion (Autostart):**
+6. **Automatizacion (Autostart):**
 Para que inicie solo cada vez que enciendes la computadora, anade estas dos lineas a tu archivo de configuracion hyprland.conf:
 exec-once = awww-daemon &
 exec-once = python ~/.config/hypr/scripts/autowallpaper.py &
