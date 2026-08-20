@@ -2,7 +2,13 @@
 
 Un script ligero y autonomo en Python disenado para entornos Wayland que cambia tu fondo de pantalla automaticamente usando la API de Wallhaven. Ideal para tus Wifus o alguna otra preferencia.
 
+## Vistas Previas de los fondos
 
+Aqui puedes ver algunos ejemplos de Wifus:
+
+![Escritorio con Elsa](screenshots/Ejemplo1.jpeg)
+![Escritorio con Las Dokis](screenshots/Ejemplo3.jpeg)
+![Escritorio con Re:Zero](screenshots/Ejemplo5.jpeg)
 
 Caracteristicas Principales
 - **Descarga Inteligente:** Busca imagenes en resolucion 16:9 y pureza SFW directamente desde Wallhaven. Puedes cambiar esto *cof cof* ya sabes para qué cosa.
