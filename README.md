@@ -2,6 +2,8 @@
 
 Un script ligero y autonomo en Python disenado para entornos Wayland que cambia tu fondo de pantalla automaticamente usando la API de Wallhaven. Ideal para tus Wifus o alguna otra preferencia.
 
+
+
 Caracteristicas Principales
 - **Descarga Inteligente:** Busca imagenes en resolucion 16:9 y pureza SFW directamente desde Wallhaven. Puedes cambiar esto *cof cof* ya sabes para qué cosa.
 - **Sistema Anti-Repeticion:** Utiliza un sistema de "baraja" para asegurar que todos los personajes o etiquetas configuradas se muestren al menos una vez antes de repetir algun termino.
@@ -20,7 +22,26 @@ Para que el script funcione correctamente, tu sistema debe contar con:
 
 ## Para la Instalacion y Uso
 
-**Solo debes instalar dependencias:** 
+1. **Solo debes instalar dependencias:** 
    Asegurate de instalar Python y la libreria requests desde tu gestor de paquetes, preguntale a tu IA de confianza si tienes otro. Por ejemplo, en Arch Linux o CachyOS:
    ```bash
    sudo pacman -S python-requests
+
+2. **Guardar el archivo principal:**
+Descarga el archivo autowallpaper.py y guardalo en tu directorio de scripts de Hyprland, por ejemplo en: ~/.config/hypr/scripts/
+
+3. **Otorgar permisos de ejecucion:**
+Abre una terminal y haz que el script sea ejecutable por el sistema:
+chmod +x ~/.config/hypr/scripts/autowallpaper.py
+
+4. **Configuracion interna:**
+Puedes abrir autowallpaper.py con cualquier editor de texto para modificar el diccionario PERSONAJES e incluir tus propios terminos de busqueda o ajustar la variable TIEMPO_MINUTOS segun tus preferencias.
+
+5. **Automatizacion (Autostart):**
+Para que inicie solo cada vez que enciendes la computadora, anade estas dos lineas a tu archivo de configuracion hyprland.conf:
+exec-once = awww-daemon &
+exec-once = python ~/.config/hypr/scripts/autowallpaper.py &
+
+*Una advertencia: Si utilizas otro gestor de fondos por defecto como hyprpaper, asegurate de desactivarlo para evitar conflictos graficos.
+
+A disfrutar!!
